@@ -13,7 +13,7 @@ Find a password in a file named -. That’s our target! WARNING: Not all file na
 
 ## Solution
 ### Step 1: Get the Password from Level 0
-> If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.
+> If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.<br/>
 Before connecting, I need the password from Level 0. It’s in a file I saved earlier. Let’s find it:
 ```
 locate p0.txt
