@@ -13,7 +13,8 @@ Find a password in a file named -. That’s our target! WARNING: Not all file na
 
 ## Solution
 ### Step 1: Get the Password from Level 0
-> If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.<br/>
+> If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.
+
 Before connecting, I need the password from Level 0. It’s in a file I saved earlier. Let’s find it:
 ```
 locate p0.txt
@@ -104,7 +105,8 @@ If I forgot the path, I can find it:
 ```
 locate p0.txt
 ```
-> It shows /home/kali/bandit/p0.txt, so I’m in the right place.<br/>
+> It shows /home/kali/bandit/p0.txt, so I’m in the right place.
+
 Now save the password:
 ```
 echo 'password_from_level_1' > p1.txt
