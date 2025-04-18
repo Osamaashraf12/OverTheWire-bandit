@@ -14,6 +14,7 @@ Start with Level 0 on the OverTheWire website. Follow the instructions there, th
 
 ## Writeups
 [Level0-1](Level0-1.md)
+[Level1-2](Level1-2.md)
 
 More levels will be added as I progress through the wargame.
 
