@@ -20,7 +20,8 @@ Before connecting, I need the password from Level 0. It’s in a file I saved ea
 locate p0.txt
 ```
 - _locate_ searches for files on my computer.
-> It shows /home/kali/bandit/p0.txt.<br/>
+> It shows /home/kali/bandit/p0.txt.
+
 Now read it:
 ```
 cat /home/kali/bandit/p0.txt
