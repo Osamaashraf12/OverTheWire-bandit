@@ -7,8 +7,8 @@ I’m Osama, a student learning cybersecurity. This is my writeup for Bandit Lev
 Find a password in a file named spaces in this filename in the home directory. WARNING: File names with spaces can be tricky!
 
 ## Setup
-A terminal (I’m using Kali Linux, but any terminal works).
-Know how to type simple commands (I’ll explain them!).
+- A terminal (I’m using Kali Linux, but any terminal works).
+- Know how to type simple commands (I’ll explain them!).
 > For unexplained commands, please refer to past levels in this repository.
 
 ## Solution
@@ -18,35 +18,45 @@ Before connecting, I need the password from Level 1. It’s in a file I saved ea
 locate p1.txt
 cat /home/kali/bandit/p1.txt
 ```
-> I see the password (password_from_level_1). I copied it.
+> I see the password (password_from_level_1).
+
+I copied it.
 
 ### Step 2: Connect to the Server
 Now let’s connect to the Bandit server:
 ```
 ssh bandit2@bandit.labs.overthewire.org -p 2220
 ```
-> It asks for the password. I pasted the one from p1.txt. I’m in! If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.
+> It asks for the password.
+
+I pasted the one from p1.txt. I’m in! If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.
 
 ### Step 3: Look Around
 I didn’t get the challenge at first, but let’s try:
 ```
 ls
 ```
-> It shows spaces in this filename. Wow, I get it now. the file name has spaces!
+> It shows "spaces in this filename".
+
+I get it now. the file name has spaces!
 
 ### Step 4: Read the File
 Let’s read the file:
 ```
 cat spaces in this filename
 ```
-> Hhhmmmm, it fails! It says “No such file or directory” for each word. Makes sense—spaces aren’t normal in file names, so cat thinks they’re separate files.
+> Hhhmmmm, it fails! It says “No such file or directory” for each word.
+
+Makes sense. Spaces aren’t normal in file names, so cat thinks they’re separate files.
 
 ### Step 5: Read with Escaped Spaces
 The spaces are special characters. To read them, I put a \ before each space to escape it:
 ```
 cat spaces\ in\ this\ filename
 ```
-> Yahhoo! It works! I see the password for Level 3. I copied it (highlight with mouse, Ctrl+C).
+> Yahhoo! It works! I see the password for Level 3.
+
+I copied it.
 
 ### Step 5: Alternative File Read
 I love learning, so let’s try another way—put the whole name in quotes to treat it as one string:
@@ -54,7 +64,9 @@ I love learning, so let’s try another way—put the whole name in quotes to tr
 cat "spaces in this filename"
 ```
 - " makes the system see the name as one piece.
-> It shows the password again! Two ways to read the file, perfect!
+> It shows the password again!
+
+Two ways to read the file, perfect!
 
 ### Step 6: Leave the Server
 Time to go back to my terminal:
