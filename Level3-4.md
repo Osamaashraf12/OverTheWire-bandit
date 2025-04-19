@@ -39,7 +39,7 @@ Maybe the file is hidden? In Linux, hidden files start with a dot (.) and don’
 ```
 ls -a
 ```
-- -a shows all files, including hidden ones (like . and .., which refer to directories).
+- _-a_ shows all files, including hidden ones (like . and .., which refer to directories).
 > It shows: . .. ...Hiding-From-You
 
 There it is! A file named ...Hiding-From-You. The name suggests it’s trying to stay sneaky, but we found it.
@@ -55,16 +55,17 @@ cat ...Hiding-From-You
 ```
 exit
 cd /home/kali/bandit/
-echo '2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ' > p3.txt
+echo 'password_for_Level_3' > p3.txt
 ```
 
 ## Learnables from this Level
-- Hidden Files: In Linux, files starting with a dot (.) are hidden and won’t show with a regular ls. Use ls -a to reveal them. This is common in real systems for configuration files or sensitive data.
-- Command Options: The -a flag for ls is super useful for pentesting when files might be hidden intentionally.
+- Hidden Files: In Linux, files starting with a dot (.) are hidden and won’t show with a regular ls. Use _ls -a_ to reveal them. This is common in real systems for configuration files or sensitive data.
+- Command Options: The _-a_ flag for _ls_ is super useful for pentesting when files might be hidden intentionally.
+- Enumeration: Always check for hidden files, directories, or processes in pentesting. Tools like _ls -a_ or `find` are your friends!
 
 ## What’s Next?
-Ready for Level 3! Connect using:
+Ready for Level 4! Connect using:
 ```
-ssh bandit3@bandit.labs.overthewire.org -p 2220
+ssh bandit4@bandit.labs.overthewire.org -p 2220
 ```
 Paste the password you found. Let’s keep going! See you in [Level4-5](Level4-5.md).
