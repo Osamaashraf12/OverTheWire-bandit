@@ -85,7 +85,7 @@ Replace password_from_level_2 with the password you copied.
 
 ## Learnables from this level:
 - Special characters: Spaces in file names are tricky. Use \ to escape them or " to quote the name. This is common in pentesting when exploring weird file systems.
-File names: Unusual names (like spaces or - from Level1-2) need special handling, which happens in real-world systems too!
+- File names: Unusual names (like spaces or - from Level1-2) need special handling, which happens in real-world systems too!
 
 What’s Next?
 Let’s keep going! For Level 3, use:
