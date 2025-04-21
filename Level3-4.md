@@ -12,7 +12,7 @@ The challenge says the password is in a hidden file located in the inhere direct
 > For unexplained commands, please refer to past levels in this repository.
 
 ## Solution
-### Step 1: Get the Password from Level 2 and connect to the server
+### Step 1: Get the Password for Level 3 and connect to the server
 You became better than me in this step
 
 ### Step 2: Explore the Directory
@@ -49,7 +49,7 @@ Let’s read the file to get the password:
 ```
 cat ...Hiding-From-You
 ```
-> Now I have the password for Level 3! I copied it.
+> Now I have the password for Level 4! I copied it.
 
 ### Step 5: Leave the Server and save the file in my terminal
 ```
