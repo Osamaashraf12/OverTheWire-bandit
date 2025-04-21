@@ -36,7 +36,7 @@ Now I wanted to read the readme file. I tried this:
 cat readme
 ```
 - `cat` is a command to show what’s inside a file.
-It worked! You can see a message saying “Congratulations” and some rules, plus the password for Level 1. I won’t write the password here (rules say no spoilers!), copy it down.
+It worked! You can see a message saying “Congratulations” and some rules, plus the password for Level 1.<br/> I won’t write the password here (rules say no spoilers!), copy it down.
 
 ### Step 4: Leave the Server
 After getting the password, go back to your terminal. type:
