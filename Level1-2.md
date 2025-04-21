@@ -26,7 +26,9 @@ Now read it:
 ```
 cat /home/kali/bandit/p1.txt
 ```
-> I see the password (password_for_level_1). I copied it.
+> I see the password (password_for_level_1).
+
+I copied it.
 
 ### Step 2: Connect to the Server
 Now let’s connect to the Bandit server:
@@ -40,34 +42,43 @@ Let’s see what’s here:
 ```
 ls
 ```
-> Guess what? It shows -. Wow, that’s the file we need!
+> Guess what? It shows -.
+
+Wow, that’s the file we need!
 
 ### Step 3: Alternative File Search
 I want to learn, not just win. Let’s try finding the - file with other commands. First, I tried:
 ```
 locate -
 ```
-> But it says “Command ‘locate’ not found” and suggests installing it. I tried installing it with admin privileges:
+> But it says “Command ‘locate’ not found” and suggests installing it.
+
+I tried installing it with admin privileges:
 ```
 sudo apt install plocate
 ```
 - `sudo` runs commands as an admin.
-> But it failed because I don’t have admin rights. That makes sense, no admin powers in a wargame!
+> But it failed because I don’t have admin rights.
+
+That makes sense, no admin powers in a wargame!
 
 Let’s try another command:
-
 ```
 find -
 ```
 - `find` searches for files in the current directory.
-> Yahhoo! It shows -. So, _find_ works, but `locate` doesn’t here.
+> Yahhoo! It shows -.
+
+So, `find` works, but `locate` doesn’t here.
 
 ### Step 4: Read the File
 Now let’s read the - file:
 ```
 cat -
 ```
-> Weird! Nothing shows up, and it hangs. Maybe the - name is tricky? I pressed Ctrl+C to stop it.
+> Weird! Nothing shows up, and it hangs.
+
+Maybe the - name is tricky? I pressed Ctrl+C to stop it.
 
 The - name looks like a command option, not a file. Let’s try using the full path (to tell the system it’s a file not a command option). 
 First, check where I am:
@@ -75,11 +86,15 @@ First, check where I am:
 pwd
 ```
 - `pwd` shows my current directory.
-> It says /home/bandit1. So the file’s path is /home/bandit1/-. Let’s try:
+> It says /home/bandit1.
+
+So the file’s path is /home/bandit1/-. Let’s try:
 ```
 cat /home/bandit1/-
 ```
-> It works! I see the password for Level 2. I copied it.
+> It works! I see the password for Level 2.
+
+I copied it.
 
 ### Step 4: Alternative File Read
 I love learning, so let’s try another way: redirection:
