@@ -55,7 +55,7 @@ cat ...Hiding-From-You
 ```
 exit
 cd /home/kali/bandit/
-echo 'password_for_Level_3' > p3.txt
+echo 'password_for_Level_4' > p4.txt
 ```
 
 ## Learnables from this Level
