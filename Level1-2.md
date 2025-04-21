@@ -12,28 +12,28 @@ Find a password in a file named -. That’s our target! WARNING: Not all file na
 > For unexplained commands, please refer to [Level0-1](Level0-1.md)
 
 ## Solution
-### Step 1: Get the Password from Level 0
+### Step 1: Get the Password for Level 1
 > If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.
 
 Before connecting, I need the password from Level 0. It’s in a file I saved earlier. Let’s find it:
 ```
-locate p0.txt
+locate p1.txt
 ```
-- _locate_ searches for files on my computer.
-> It shows /home/kali/bandit/p0.txt.
+- `locate` searches for files on my computer.
+> It shows /home/kali/bandit/p1.txt.
 
 Now read it:
 ```
-cat /home/kali/bandit/p0.txt
+cat /home/kali/bandit/p1.txt
 ```
-> I see the password (password_from_level_0). I copied it.
+> I see the password (password_for_level_1). I copied it.
 
 ### Step 2: Connect to the Server
 Now let’s connect to the Bandit server:
 ```
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 ```
-> It asks for the password. I pasted the one from p0.txt. I’m in!
+> It asks for the password. I pasted the one from p1.txt. I’m in!
 
 ### Step 3: Look Around
 Let’s see what’s here:
@@ -51,7 +51,7 @@ locate -
 ```
 sudo apt install plocate
 ```
-- _sudo_ runs commands as an admin.
+- `sudo` runs commands as an admin.
 > But it failed because I don’t have admin rights. That makes sense, no admin powers in a wargame!
 
 Let’s try another command:
@@ -59,8 +59,8 @@ Let’s try another command:
 ```
 find -
 ```
-- _find_ searches for files in the current directory.
-> Yahhoo! It shows -. So, _find_ works, but _locate_ doesn’t here.
+- `find` searches for files in the current directory.
+> Yahhoo! It shows -. So, _find_ works, but `locate` doesn’t here.
 
 ### Step 4: Read the File
 Now let’s read the - file:
@@ -74,7 +74,7 @@ First, check where I am:
 ```
 pwd
 ```
-- _pwd_ shows my current directory.
+- `pwd` shows my current directory.
 > It says /home/bandit1. So the file’s path is /home/bandit1/-. Let’s try:
 ```
 cat /home/bandit1/-
@@ -86,7 +86,7 @@ I love learning, so let’s try another way: redirection:
 ```
 cat < -
 ```
-- _<_ sends a file’s content to _cat_ (unlike _>_, which sends output to a file).
+- `<` sends a file’s content to `cat` (unlike `>`, which sends output to a file).
 > It shows the password again! Two ways to read the file, perfect!
 
 ### Step 5: Leave the Server
@@ -101,27 +101,27 @@ Let’s save the password so I don’t forget. I’ll use the same directory as 
 ```
 cd /home/kali/bandit/
 ```
-- _cd_ changes to a directory.
+- `cd` changes to a directory.
 If I forgot the path, I can find it:
 ```
-locate p0.txt
+locate p1.txt
 ```
-> It shows /home/kali/bandit/p0.txt, so I’m in the right place.
+> It shows /home/kali/bandit/p1.txt, so I’m in the right place.
 
 Now save the password:
 ```
-echo 'password_from_level_1' > p1.txt
+echo 'password_for_level_2' > p2.txt
 ```
-Replace password_from_level_1 with the password you copied.
+Replace password_for_level_2 with the password you copied.
 Let’s check:
 ```
 ls
 ```
-> It shows p0.txt and p1.txt. The password is saved!
+> It shows p1.txt and p2.txt. The password is saved!
 
 ### Learnables from this level:
-- Linux commands: _pwd_ to check my directory, _cd_ to move directories, _find_ to search files, _locate_ (but it didn’t work in the SSH server).
-- Redirection:_ >_ saves output to a file, _<_ sends a file to a command. These are super useful in pentesting to handle files and data.
+- Linux commands: `pwd` to check my directory, `cd` to move directories, `find` to search files, `locate` (but it didn’t work in the SSH server).
+- Redirection: `>` saves output to a file, `<` sends a file to a command. These are super useful in pentesting to handle files and data.
 File names: Weird names like - can trick commands like cat. Using paths or redirection fixes it. This happens in real systems too!
 
 What’s Next?
