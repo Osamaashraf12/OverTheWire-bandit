@@ -12,13 +12,13 @@ Find a password in a file named spaces in this filename in the home directory. W
 > For unexplained commands, please refer to past levels in this repository.
 
 ## Solution
-### Step 1: Get the Password from Level 1
+### Step 1: Get the Password for Level 2
 Before connecting, I need the password from Level 1. It’s in a file I saved earlier [Level1-2](Level1-2.md). Let’s find it:
 ```
 locate p1.txt
 cat /home/kali/bandit/p1.txt
 ```
-> I see the password (password_from_level_1).
+> I see the password (password_for_level_3).
 
 I copied it.
 
@@ -29,7 +29,7 @@ ssh bandit2@bandit.labs.overthewire.org -p 2220
 ```
 > It asks for the password.
 
-I pasted the one from p1.txt. I’m in! If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.
+I pasted the one from p2.txt. I’m in! If you’re stuck at the password prompt, press Ctrl+C to return to your terminal.
 
 ### Step 3: Look Around
 I didn’t get the challenge at first, but let’s try:
@@ -79,9 +79,9 @@ exit
 Let’s save the password so I don’t forget. I’ll use the same directory:
 ```
 cd /home/kali/bandit/
-echo 'password_from_level_2' > p2.txt
+echo 'password_for_level_3' > p3.txt
 ```
-Replace password_from_level_2 with the password you copied.
+Replace password_for_level_3 with the password you copied.
 
 ## Learnables from this level:
 - Special characters: Spaces in file names are tricky. Use \ to escape them or " to quote the name. This is common in pentesting when exploring weird file systems.
