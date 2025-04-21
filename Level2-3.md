@@ -15,10 +15,10 @@ Find a password in a file named spaces in this filename in the home directory. W
 ### Step 1: Get the Password for Level 2
 Before connecting, I need the password from Level 1. It’s in a file I saved earlier [Level1-2](Level1-2.md). Let’s find it:
 ```
-locate p1.txt
-cat /home/kali/bandit/p1.txt
+locate p2.txt
+cat /home/kali/bandit/p2.txt
 ```
-> I see the password (password_for_level_3).
+> I see the password (password_for_level_2).
 
 I copied it.
 
