@@ -31,7 +31,7 @@ Let’s see what’s inside:
 ```
 ls
 ```
-> Output: -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
+> -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
 
 There are multiple files, all prefixed with a dash (-). The challenge says only one is human-readable, but what does that mean? Human-readable files typically contain ASCII text (like passwords), while others might be binary or encoded data.
 
@@ -97,10 +97,10 @@ Ignoring this step from next walkthrough.
 
 
 ## Learnables from this Level
-- Linux Command: The file command analyzes file types, making it a powerful tool for pentesting when you need to identify specific file formats (e.g., text vs. binary).
+- Linux Command: The `file` command analyzes file types, making it a powerful tool for pentesting when you need to identify specific file formats (e.g., text vs. binary).
 - Human-Readable Files: In Linux, human-readable files typically contain ASCII text (e.g., passwords, scripts). Binary or encoded files are not human-readable.
 - Handling Special Characters: Files with dashes (-) can cause issues with commands like `cat`. Use full paths (e.g., /home/bandit4/inhere/-file00) or ./-file00 to access them.
-- Enumeration Efficiency: Manually checking files works for small sets, but tools like file or find are more efficient for larger directories, a key skill in pentesting.
+- Enumeration concept: Manually checking files works for small sets, but tools like file or find are more efficient for larger directories, a key skill in pentesting.
 
 ## What’s Next?
 Ready for Level 5! Connect using:
