@@ -27,8 +27,6 @@ List the contents of the inhere directory:
 `
 ls
 `
-> Output:
-> 
 > maybehere00  maybehere04  maybehere08  maybehere12  maybehere16
 > 
 > maybehere01  maybehere05  maybehere09  maybehere13  maybehere17
