@@ -5,11 +5,10 @@ I’m diving into pentesting as a cybersecurity student, and this is my walkthro
 
 ## Problem
 The challenge states the password for the next level is in the only human-readable file in the inhere directory. Our task is to identify and read this file.
+> For unexplained commands, please refer to past levels in this repository.
 
 ## Setup
-- A terminal (I’m using Kali Linux, but any terminal works).
-- Basic Linux command knowledge (I’ll explain each step clearly!).
-> For unexplained commands, please refer to past levels in this repository.
+Ignoring this step from next walkthrough.
 
 ## Solution
 ### Step 1: Get the Password from Level 2 and connect to the server
@@ -47,7 +46,7 @@ The dash (-) in the filename confuses cat. It reminds me of a past level. To rea
 ```
 cat /home/bandit4/inhere/-file00
 ```
-> Output: ŉOT   S  plS]-EH t :- Z
+> ŉOT   S  plS]-EH t :- Z
 
 This looks like unreadable binary or encoded data, not human-readable text. This aligns with the challenge: most files are not human-readable, and we need to find the one that is.
 
@@ -62,7 +61,7 @@ cat /home/bandit4/inhere/-file02
 ...
 cat /home/bandit4/inhere/-file07
 ```
-> Output for -file07: password_for_Level_4
+> password_for_Level_4
 
 File -file07 contains readable ASCII text, which looks like the password! This approach works but isn't that smart.
 
@@ -73,22 +72,23 @@ file /home/bandit4/inhere/-file0*
 ```
 - `file` displays type of data in files.
 - `*` means that any value can be here.
-> Output:
-
-/home/bandit4/inhere/-file00: PGP Secret Sub-key -
-/home/bandit4/inhere/-file01: data
-/home/bandit4/inhere/-file02: data
-/home/bandit4/inhere/-file03: data
-/home/bandit4/inhere/-file04: data
-/home/bandit4/inhere/-file05: data
-/home/bandit4/inhere/-file06: data
-/home/bandit4/inhere/-file07: ASCII text
-/home/bandit4/inhere/-file08: data
-/home/bandit4/inhere/-file09: data
+> 
+> /home/bandit4/inhere/-file00: PGP Secret Sub-key -
+> /home/bandit4/inhere/-file01: data
+> /home/bandit4/inhere/-file02: data
+> /home/bandit4/inhere/-file03: data
+> /home/bandit4/inhere/-file04: data
+> /home/bandit4/inhere/-file05: data
+> /home/bandit4/inhere/-file06: data
+> /home/bandit4/inhere/-file07: ASCII text
+> /home/bandit4/inhere/-file08: data
+> /home/bandit4/inhere/-file09: data
 
 The `file` command identifies -file07 as ASCII text, while others are binary or data. This confirms -file07 is the human-readable file. Let’s read it:
+`
 cat /home/bandit4/inhere/-file07
-Output: password_for_Level_5
+`
+> password_for_Level_5
 
 This is the password for Level 5!
 
