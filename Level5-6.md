@@ -12,21 +12,21 @@ We need to know how to find a file with some specifications.
 ## Solution
 ### Step 1: Explore the Directory
 Check the current directory:
-`
+```
 ls
-`
+```
 > inhere
 
 The challenge points to the inhere directory, so let’s move into it:
-`
+```
 cd inhere
-`
+```
 
 ### Step 2: List Files
 List the contents of the inhere directory:
-`
+```
 ls
-`
+```
 > maybehere00  maybehere04  maybehere08  maybehere12  maybehere16
 > 
 > maybehere01  maybehere05  maybehere09  maybehere13  maybehere17
@@ -39,9 +39,9 @@ There are 20 directories, each likely containing files. Manually checking each o
 
 ### Step 3: Use the find Command
 To locate the file efficiently, we use the find command with the given specifications. Let’s break down the command used:
-`
+```
 find . -type f -size 1033c -not -executable -exec file {} + | grep ASCII
-`
+```
 > ./maybehere07/.file2: ASCII text, with very long lines (1000)
 
 - `.` specifies the starting point for the search, which is the current directory (inhere). It searches through all subdirectories.
@@ -59,9 +59,9 @@ This command identifies the file ./maybehere07/.file2 as ASCII text.
 
 ### Step 4: Read the File
 Now that we know the file’s location, let’s read its contents:
-`
+```
 cat ./maybehere07/.file2
-`
+```
 > password_for_Level_6
 
 This is the password for Level 6!
