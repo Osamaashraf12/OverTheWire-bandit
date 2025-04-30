@@ -65,15 +65,8 @@ cat ./maybehere07/.file2
 ```
 > password_for_Level_6.
 
-This is the password for Level 6!
+This is the password for Level 6! Use it to keep going! See you in [Level6-7](Level6-7.md).
 
 ## Learnables from this Level
 - Linux Command: `find` is a powerful tool for searching files based on criteria like type, size, and permissions. Use `man` to explore commands options.
 - Piping `|`: Combines commands (e.g., find with grep).
-
-## What’s Next?
-Ready for Level 6! Connect using:
-```
-ssh bandit6@bandit.labs.overthewire.org -p 2220
-```
-Paste the password (password_for_level_6). Let’s keep going! See you in [Level6-7](Level6-7.md).
