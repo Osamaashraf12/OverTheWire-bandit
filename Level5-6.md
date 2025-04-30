@@ -52,6 +52,7 @@ find . -type f -size 1033c -not -executable -exec file {} + | grep ASCII
 - `file` identifies the type of each file (e.g., ASCII text, binary).
 - `{}` represents each file found by `find`. It gets replaced with the actual file paths.
 - `+` Groups all matching files and runs the `file` command on them together.
+- `-exec file {} +` executes (runs) `file` command on all matching files to determine their type (e.g., ASCII text, binary).
 - `|` passes the output of the `find` command to the next command (which is `grep`).
 - `grep ASCII` filters the output to show only files containing the word 'ASCII' (which means human-readable).
 
@@ -62,13 +63,12 @@ Now that we know the file’s location, let’s read its contents:
 ```
 cat ./maybehere07/.file2
 ```
-> password_for_Level_6
+> password_for_Level_6.
 
 This is the password for Level 6!
 
 ## Learnables from this Level
 - Linux Command: `find` is a powerful tool for searching files based on criteria like type, size, and permissions. Use `man` to explore commands options.
-- Enumeration concept: Manually checking directories is impractical for large data. Commands like find automate file searches, a key skill in pentesting and red teaming.
 - Piping `|`: Combines commands (e.g., find with grep).
 
 ## What’s Next?
