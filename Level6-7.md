@@ -79,7 +79,8 @@ Now, let’s read the file’s contents:
 ```
 cat /var/lib/dpkg/info/bandit7.password
 ```
-> password_for_Level_7. </br>
+> password_for_Level_7.
+
 This is the password for Level 7!
 
 ## Learnables from this Level
