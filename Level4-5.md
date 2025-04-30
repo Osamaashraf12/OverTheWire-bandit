@@ -103,8 +103,6 @@ Ignoring this step from next walkthrough.
 - Enumeration concept: Manually checking files works for small sets, but tools like file or find are more efficient for larger directories, a key skill in pentesting.
 
 ## What’s Next?
-Ready for Level 5! Connect using:
-```
-ssh bandit5@bandit.labs.overthewire.org -p 2220
-```
+Ignoring this step from next walkthrough.
+
 Paste the password (password_for_level_5). Let’s keep going! See you in [Level5-6](Level5-6.md).
