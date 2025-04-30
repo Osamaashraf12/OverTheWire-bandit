@@ -40,7 +40,8 @@ We need a file that is:
 - A regular file (-type f)
 - Exactly 33 bytes (-size 33c)
 - Owned by user bandit7 (-user bandit7)
-- Owned by group bandit6 (-group bandit6)</br>
+- Owned by group bandit6 (-group bandit6)
+
 Let’s run the find command starting from the root directory (/):
 ```
 find / -type f -size 33c -user bandit7 -group bandit6
