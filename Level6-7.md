@@ -81,17 +81,10 @@ cat /var/lib/dpkg/info/bandit7.password
 ```
 > password_for_Level_7.
 
-This is the password for Level 7!
+This is the password for Level 7! Use it to keep going! See you in [Level7-8](Level7-8.md).
 
 ## Learnables from this Level
 - Linux Command: `find` searches filesystems with specific criteria like ownership (-user, -group) and size (-size). Explore options with man find.
 - Users and Groups: Files are owned by a user and group, controlling access. You can check ownership for files with ls -l.
 - Error Suppression: `2> /dev/null` discards error messages, cleaning up command output. This is crucial in pentesting to focus on relevant results.
 - Enumeration skill: Searching an entire server (/) efficiently with find is a key pentesting skill for locating files when their location is unknown.
-
-## What’s Next?
-Ready for Level 7! Connect using:
-`
-ssh bandit7@bandit.labs.overthewire.org -p 2220
-`
-Paste the password password_for_Level_7. Let’s keep going! See you in [Level7-8](Level7-8.md).
